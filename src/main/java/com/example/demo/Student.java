@@ -3,10 +3,6 @@ package com.example.demo;
 
 import java.time.LocalDate;
 
-import java.sql.Date;
-import java.time.LocalDate;
-import javax.persistence.Column;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -100,8 +96,5 @@ public class Student {
     public void setAge(int age) {
         this.age = age;
     }
-    private LocalDate dob;
-    private String email;
-    private int age;
     
 }
