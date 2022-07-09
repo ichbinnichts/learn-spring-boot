@@ -1,6 +1,11 @@
 package com.example.demo;
 
+
 import java.time.LocalDate;
+
+import java.sql.Date;
+import java.time.LocalDate;
+import javax.persistence.Column;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,6 +17,7 @@ import javax.persistence.Table;
 @Entity(name="Student")
 @Table
 public class Student {
+
 
     public Student() {
     }
@@ -31,6 +37,14 @@ public class Student {
         this.age = age;
     }
 
+    public Student(Long id, String name, LocalDate dob, String email, int age) {
+        this.id = id;
+        this.name = name;
+        this.dob = dob;
+        this.email = email;
+        this.age = age;
+    }
+    
     @Id
     @SequenceGenerator(
         name = "student_sequence",
@@ -86,5 +100,8 @@ public class Student {
     public void setAge(int age) {
         this.age = age;
     }
-
+    private LocalDate dob;
+    private String email;
+    private int age;
+    
 }
